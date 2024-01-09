@@ -1,0 +1,23 @@
+/* Painel */
+.painel{
+    height: 120px;
+    width: 120px;
+    background-color: rgb(44, 40, 40);
+    border: 1px solid #353535;
+    cursor: pointer;
+
+    transform: rotateY(180deg);
+    transition: 0.7s;
+}
+
+/* Span */
+.painel > span{
+    font-size: 50px;
+    display: none;
+}
+
+/* gameInterface */
+#gameInterface{
+    display: none;
+    grid-template-columns: 120px 120px 120px 120px;
+}
