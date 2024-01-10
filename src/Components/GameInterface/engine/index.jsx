@@ -1,3 +1,18 @@
+import selectCard from '../../../audio/selected.mp3'
+import matchsound from '../../../audio/matchsound.mp3'
+
+// audioPlay
+function audioPlay(url){
+    // Instanciando o audio
+    const audio = new Audio(url)
+
+    // Alterando o volume do audio
+    audio.volume = 0.1
+
+    // Executando o audio
+    audio.play()
+}
+
 // shuffle
 function shuffle(array){
 
@@ -87,6 +102,9 @@ export function clickPainel(painel){
 
         // Alterando o rotateY para 0deg
         painel.style.webkitTransform = `rotateY(0deg)`
+
+        // Acionando audio da carta virando
+        audioPlay(selectCard)
     }
 
     // Lógica condicional
@@ -157,6 +175,9 @@ function emojiequalemoji(){
     for(let i = 0;i <= arrayVerification.length;i++){
         arrayVerification.splice(i)
     }
+
+    // Acionando audio de par encontrado
+    audioPlay(matchsound)
 }
 
 // Função que compara emojis diferentes
